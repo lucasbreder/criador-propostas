@@ -1,0 +1,148 @@
+.site-container {
+  animation-name: surgeEsquerda;
+  animation-duration: 1.5s;
+}
+.remove-linha {
+  transition: all 1s;
+}
+.remove-linha:hover {
+  transform: scale(1.1);
+  border-radius: 0 0 5px 5px;
+  border-top: 5px solid #4d4d4d;
+  border-left: 2px solid #f79323;
+  border-right: 2px solid #f79323;
+  border-bottom: 2px solid #f79323;
+  color: transparent;
+  background-image: linear-gradient(to left, #f79323 0%, transparent 30%, transparent 70%, #f79323 100%);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 10px 80%;
+  background-position: center;
+  tex
+}
+.remove-linha::after {
+    content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #f79323;
+  border-radius: 4px;
+  transition: all .2s;
+  transform-origin: bottom right;
+  opacity: 0;
+}
+.remove-linha:hover:after {
+  display: block;
+  opacity: 1;
+  transform-origin: bottom right;
+  animation-name: tampaLixeira;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.orcamento-tabela tr {
+  transition: all 1s;
+}
+.saida-linha {
+  transform: translateX(200px);
+  opacity: 0;
+  height: 0;
+  display: table-row;
+}
+.adiciona-linha {
+  transition: all .2s;
+  position: relative;
+}
+.adiciona-linha:hover {
+  background-color: #dc8019;
+  box-shadow: inset 1px 1px 1px rgba(0,0,0, 0.3);
+}
+.adiciona-linha::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  height: 5px;
+  background-color: #f79323;
+  border-radius: 100px;
+  transition: all 1s;
+  transform-origin: bottom right;
+  opacity: 0;
+}
+.adiciona-linha:hover::after {
+  animation-name: sobeEscondeDireita;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.site-titulo::before, .contato-titulo::before {
+  transition: all 1s;
+}
+.site-titulo:hover::before, .contato-titulo:hover::before {
+  animation-name: Gira;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.imprimir {
+  transition: all 1s;
+}
+.imprimir:hover {
+  transform: scale(1.2);
+}
+@keyframes sobeEscondeDireita {
+  0% {
+    opacity: 1;
+    top: 0;
+    transform: translateX(0);
+  }
+  50% {
+    top: -15px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    top: -15px;
+    transform: translateX(200px);
+  }
+}
+@keyframes surgeEsquerda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes tampaLixeira {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes Gira {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

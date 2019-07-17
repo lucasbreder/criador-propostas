@@ -1,0 +1,25 @@
+@media print {
+    html {
+        background-color: rgba(202, 186, 175, 0.1);
+        background-image: url(../images/logo-macacos-outline.svg);
+        background-position: bottom -10% right -10%;
+        background-repeat: no-repeat;
+        background-size: 60%;
+    }
+    body {
+        font-size: 16pt;
+    }
+    .site-container {
+        width: 50cm;
+        height: 29.7cm;
+        size: auto;
+        margin: 0;
+        background-image: none;
+    }
+    .campoEditor {
+      background-color: red;
+    }
+    .remove-linha, .adiciona-linha, .imprimir {
+      display: none;
+    }
+}

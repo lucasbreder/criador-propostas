@@ -1,0 +1,246 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #faf9f9;
+    font-family: 'gotham_lightregular';
+    font-weight: lighter;
+    height: 100%;
+    width: 100%;
+}
+.site-container {
+    padding: 8em;
+    background-image: url(../images/logo-macacos-outline.svg);
+    background-position: bottom -10% right -10%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 12em;
+    height: 100%;
+    position: relative;
+}
+.orcamento-tabela {
+  width: 100%;
+}
+
+.destinatario, .orcamento-tabela td, .contato-nome, .contato-telefone, .contato-email, .observacoes-conteudo {
+  font-size: 1.3em;
+}
+.site-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8em;
+}
+.info, .orcamento-logo {
+    width: 33%;
+    box-sizing: border-box;
+}
+.destinatario {
+    line-height: 1.3em;
+}
+.site-titulo, .contato-titulo {
+    color: #734b24;
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'monkey';
+    font-size: 5em;
+    text-transform: uppercase;
+    padding-left: .9em;
+    font-weight: lighter;
+}
+.orcamento-numero {
+  font-family: 'monkey';
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -4em;
+  right: -4em;
+  color: #734b24;
+  font-weight: bold;
+}
+.site-titulo::before  {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/recibo.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    left: 0;
+}
+.orcamento-logo {
+    background-image: url(../images/logo-macacos.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 100px;
+}
+.conteudo-titulo {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+.orcamento-tabela {
+    border-collapse: collapse;
+}
+.orcamento-tabela thead tr td {
+    text-align: left;
+    font-family: 'gotham_boldregular';
+    color: #534741;
+    text-transform: uppercase;
+    padding: 0 2.5em;
+}
+.orcamento-tabela td {
+    line-height: 1.3em;
+    padding: 1.5em 2.5em;
+    border-right: 1px solid #e08a2d;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.orcamento-tabela tbody td:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #c0c0c0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    margin-left: 5%;
+}
+.orcamento-tabela td:nth-last-of-type(3n) {
+    padding-left: 0;
+}
+.orcamento-tabela td:nth-last-of-type(3n + 1) {
+    border-right: none;
+    padding-right: 0;
+}
+.orcamento-tabela td:nth-last-of-type(3n):after {
+   margin-left: 0;
+}
+.orcamento-tabela td:nth-last-of-type(3n + 1):after {
+    width: 80%;
+    margin-left: 10%;
+}
+.orcamento-tabela tbody tr:last-of-type td:after {
+     border-bottom: none;
+}
+.orcamento-tabela-coluna-preco {
+    width: 20%;
+}
+.moeda {
+  display: block;
+    margin-bottom: 1em;
+}
+.moeda, .valor, .valor-centavos {
+    font-family: 'monkey';
+    color: #734b24;
+}
+.valor-centavos {
+    position: relative;
+    left: -5px;
+}
+.valor {
+    font-size: 4em;
+}
+.valor-periodo {
+    text-transform: uppercase;
+      display: block;
+    letter-spacing: 3px;
+}
+.observacoes {
+    margin: 2em 0 4em 0;
+}
+.observacoes-titulo {
+    color: #534741;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+.observacoes-conteudo {
+    padding: 3em 0;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+}
+.contato-titulo {
+    font-size: 3em;
+}
+.contato-titulo::before  {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/telefone.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    left: 0;
+}
+.contato-nome, .contato-telefone, .contato-email {
+    line-height: 1.5em;
+}
+.campoEditor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  border: none;
+  color: #000;
+  font-family: inherit;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.campoEsconde {
+  color: #faf9f9;
+}
+.remove-linha {
+  position: absolute;
+  right: -2em;
+  top: 4em;
+  background-color: #ccc;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 2.3em;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.adiciona-linha {
+  cursor: pointer;
+  margin: 2em auto;
+  width: 80%;
+  max-width: 200px;
+  background-color: #f79323;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .5em 0;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+}
+.esconde-linha {
+  display: none;
+}
+.imprimir {
+  width: 4em;
+  height: 4em;
+  background-image: url(../images/impressora.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: right;
+  position: relative;
+  top: -6em;
+  cursor: pointer;
+}
